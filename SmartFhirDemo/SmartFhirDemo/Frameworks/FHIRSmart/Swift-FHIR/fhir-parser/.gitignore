@@ -1,0 +1,11 @@
+*.pyc
+__pycache__
+env
+
+# ignore mappings and settings files
+/mappings.py
+/settings.py
+
+# ignore downloads
+/downloads
+
