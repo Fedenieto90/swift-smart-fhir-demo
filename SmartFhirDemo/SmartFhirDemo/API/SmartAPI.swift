@@ -93,4 +93,103 @@ class SmartAPI: NSObject {
         }
     }
     
+    //MARK : - Observations
+    
+    func getObservations(patient : Patient, completion : @escaping(_ observations : [Observation]?, _ error : Error?) -> Void) {
+        
+        Observation.search(["patient" : patient.id!.string]).perform(smart.server) { (bundle, error) in
+            if error != nil {
+                //Error
+                completion(nil, error)
+            } else {
+                let observations = bundle?.entry?
+                    .filter() { return $0.resource is Observation }
+                    .map() { return $0.resource as! Observation } ?? []
+                completion(observations, error)
+            }
+        }
+    }
+    
+    //MARK : - Condition
+    
+    func getConditions(patient : Patient, completion : @escaping(_ conditions : [Condition]?, _ error : Error?) -> Void) {
+        
+        Condition.search(["patient" : patient.id!.string]).perform(smart.server) { (bundle, error) in
+            if error != nil {
+                //Error
+                completion(nil, error)
+            } else {
+                let conditions = bundle?.entry?
+                    .filter() { return $0.resource is Condition }
+                    .map() { return $0.resource as! Condition } ?? []
+                completion(conditions, error)
+            }
+        }
+    }
+    
+    //MARK : - Diagnostic Reports
+    
+    func getDiagnosticReport(patient : Patient, completion : @escaping(_ conditions : [DiagnosticReport]?, _ error : Error?) -> Void) {
+        
+        DiagnosticReport.search(["patient" : patient.id!.string]).perform(smart.server) { (bundle, error) in
+            if error != nil {
+                //Error
+                completion(nil, error)
+            } else {
+                let diagnosticReports = bundle?.entry?
+                    .filter() { return $0.resource is DiagnosticReport }
+                    .map() { return $0.resource as! DiagnosticReport } ?? []
+                completion(diagnosticReports, error)
+            }
+        }
+    }
+    
+    //MARK : - Encounters
+    
+    func getEncounters(patient : Patient, completion : @escaping(_ encounters : [Encounter]?, _ error : Error?) -> Void) {
+        
+        Encounter.search(["patient" : patient.id!.string]).perform(smart.server) { (bundle, error) in
+            if error != nil {
+                //Error
+                completion(nil, error)
+            } else {
+                let encounters = bundle?.entry?
+                    .filter() { return $0.resource is Encounter }
+                    .map() { return $0.resource as! Encounter } ?? []
+                completion(encounters, error)
+            }
+        }
+    }
+    
+    //MARK : - Appointmets
+    
+    func getAppointments(patient : Patient, completion : @escaping(_ appointments : [Appointment]?, _ error : Error?) -> Void) {
+        
+        Appointment.search(["patient" : patient.id!.string]).perform(smart.server) { (bundle, error) in
+            if error != nil {
+                //Error
+                completion(nil, error)
+            } else {
+                let encounters = bundle?.entry?
+                    .filter() { return $0.resource is Appointment }
+                    .map() { return $0.resource as! Appointment } ?? []
+                completion(encounters, error)
+            }
+        }
+    }
+    
+    func createAppointMent() {
+        
+        let participationStatus = ParticipationStatus(rawValue: ParticipationStatus.needsAction.rawValue)
+        let appointMentParticipant = AppointmentParticipant(status: participationStatus!)
+        let appointment = Appointment(participant: [appointMentParticipant], status: AppointmentStatus.proposed)
+        
+        appointment.create(smart.server) { (error) in
+            if (error == nil) {
+                print("Appointment created")
+            } else {
+                print("Error creating appointment")
+            }
+        }
+    }
 }
