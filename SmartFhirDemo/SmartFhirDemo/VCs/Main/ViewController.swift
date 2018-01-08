@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var connectBtn: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addAppointmentBtn: UIBarButtonItem!
     
     var meds = [MedicationRequest]()
     var observations = [Observation]()
@@ -20,6 +21,8 @@ class ViewController: UIViewController {
     var diagnosticReports = [DiagnosticReport]()
     var encounters = [Encounter]()
     var appointments = [Appointment]()
+    
+    var patient : Patient!
     
     let toMedRequestDetailSegueId = "toMedRequestDetail"
     let medicationRequestsTitle = "Medication Requests"
@@ -32,6 +35,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.isHidden = true
+        self.addAppointmentBtn.isEnabled = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -55,6 +59,11 @@ class ViewController: UIViewController {
                 } else {
                     //Success
                     print("Successfully connected to SMART FHIR")
+                    
+                    //Set patient
+                    self.patient = patient
+                    
+                    self.addAppointmentBtn.isEnabled = true
                     
                     //Hide connect to FHIR button
                     self.connectBtn.isHidden = true
@@ -244,6 +253,32 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
             cell.textLabel?.text = appointment.status?.rawValue
             return cell
         }
+    }
+    
+    //MARK : Actions
+    
+    @IBAction func addAppointment(_ sender: UIBarButtonItem) {
+        let actionsheet = UIAlertController(title: "New appointment", message: nil, preferredStyle: .actionSheet)
+        
+        let createAction = UIAlertAction(title: "Create", style: .default) { (action) in
+            SmartAPI.shared.createAppointment(patient: self.patient, completion: { (error) in
+                if (error == nil) {
+                    let alert = UIAlertController(title: "Appointment", message: "Appointment created", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                    alert.addAction(okAction)
+                    self.present(alert, animated: true, completion: {
+                        self.getAppointments(patient: self.patient)
+                    })
+                }
+            })
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        actionsheet.addAction(createAction)
+        actionsheet.addAction(cancelAction)
+        
+        present(actionsheet, animated: true, completion: nil)
     }
 }
 

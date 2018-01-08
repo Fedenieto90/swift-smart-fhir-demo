@@ -178,7 +178,7 @@ class SmartAPI: NSObject {
         }
     }
     
-    func createAppointment(patient: Patient) {
+    func createAppointment(patient: Patient, completion : @escaping(_ error : Error?) -> Void) {
         
         //Create appointment participant
         let participationStatus = ParticipationStatus(rawValue: ParticipationStatus.needsAction.rawValue)
@@ -192,8 +192,10 @@ class SmartAPI: NSObject {
         appointment.create(smart.server) { (error) in
             if (error == nil) {
                 print("Appointment created")
+                completion(nil)
             } else {
                 print("Error creating appointment")
+                completion(error)
             }
         }
     }

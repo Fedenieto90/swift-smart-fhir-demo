@@ -159,8 +159,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="FHIR" id="2rq-rz-nDl"/>
+                    <navigationItem key="navigationItem" title="FHIR" id="2rq-rz-nDl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0yT-g4-X2m">
+                            <connections>
+                                <action selector="addAppointment:" destination="BYZ-38-t0r" id="cFI-ic-QtO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="addAppointmentBtn" destination="0yT-g4-X2m" id="jTb-XW-5l6"/>
                         <outlet property="connectBtn" destination="DRz-20-b6D" id="Ppf-Y8-kZ3"/>
                         <outlet property="tableView" destination="fgz-Ar-wwA" id="wL2-cn-x7Z"/>
                     </connections>
