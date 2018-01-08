@@ -178,12 +178,17 @@ class SmartAPI: NSObject {
         }
     }
     
-    func createAppointMent() {
+    func createAppointment(patient: Patient) {
         
+        //Create appointment participant
         let participationStatus = ParticipationStatus(rawValue: ParticipationStatus.needsAction.rawValue)
-        let appointMentParticipant = AppointmentParticipant(status: participationStatus!)
-        let appointment = Appointment(participant: [appointMentParticipant], status: AppointmentStatus.proposed)
+        let appointmentParticipant = AppointmentParticipant(status: participationStatus!)
         
+        //Set the patient as a relative reference to the appointment participant
+        appointmentParticipant.actor = try! patient.asRelativeReference()
+        let appointment = Appointment(participant: [appointmentParticipant], status: AppointmentStatus.proposed)
+        
+        //Create appointment
         appointment.create(smart.server) { (error) in
             if (error == nil) {
                 print("Appointment created")

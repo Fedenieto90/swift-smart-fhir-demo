@@ -240,8 +240,8 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: AppointmentCell.cellID, for: indexPath) as! AppointmentCell
-            let encounter = self.encounters[indexPath.row]
-            cell.textLabel?.text = encounter.class?.code?.string
+            let appointment = self.appointments[indexPath.row]
+            cell.textLabel?.text = appointment.status?.rawValue
             return cell
         }
     }
