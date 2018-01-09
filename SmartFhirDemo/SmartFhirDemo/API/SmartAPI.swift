@@ -183,7 +183,7 @@ class SmartAPI: NSObject {
         //Create appointment participant
         let participationStatus = ParticipationStatus(rawValue: ParticipationStatus.needsAction.rawValue)
         let appointmentParticipant = AppointmentParticipant(status: participationStatus!)
-        
+    
         //Set the patient as a relative reference to the appointment participant
         appointmentParticipant.actor = try! patient.asRelativeReference()
         let appointment = Appointment(participant: [appointmentParticipant], status: AppointmentStatus.proposed)
@@ -196,6 +196,17 @@ class SmartAPI: NSObject {
             } else {
                 print("Error creating appointment")
                 completion(error)
+            }
+        }
+    }
+    
+    func cancelAppointment(appointment : Appointment, completion : @escaping(_ error : Error?) -> Void) {
+        appointment.status = AppointmentStatus.cancelled
+        appointment.update { (error) in
+            if error != nil {
+                completion(error)
+            } else {
+                completion(nil)
             }
         }
     }

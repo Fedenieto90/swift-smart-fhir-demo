@@ -63,8 +63,6 @@ class ViewController: UIViewController {
                     //Set patient
                     self.patient = patient
                     
-                    self.addAppointmentBtn.isEnabled = true
-                    
                     //Hide connect to FHIR button
                     self.connectBtn.isHidden = true
                     self.tableView.isHidden = false
@@ -89,6 +87,7 @@ class ViewController: UIViewController {
                     
                     //Get appointments
                     self.getAppointments(patient: patient!)
+                    
                 }
             }
         }
@@ -162,6 +161,7 @@ class ViewController: UIViewController {
                     self.appointments = appointments!
                 }
                 self.tableView.reloadData()
+                self.addAppointmentBtn.isEnabled = true
             }
         }
     }
@@ -273,9 +273,21 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
             })
         }
         
+        let cancelAppointmentsAction = UIAlertAction(title: "Cancel All Appointments", style: UIAlertActionStyle.default) { (action) in
+            for appointment in self.appointments {
+                SmartAPI.shared.cancelAppointment(appointment: appointment, completion: { (error) in
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                })
+            }
+            
+        }
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
         actionsheet.addAction(createAction)
+        actionsheet.addAction(cancelAppointmentsAction)
         actionsheet.addAction(cancelAction)
         
         present(actionsheet, animated: true, completion: nil)
