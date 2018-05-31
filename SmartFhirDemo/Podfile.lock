@@ -1,0 +1,23 @@
+PODS:
+  - SMART (3.2.0)
+
+DEPENDENCIES:
+  - SMART (from `https://github.com/smart-on-fhir/Swift-SMART.git`)
+
+EXTERNAL SOURCES:
+  SMART:
+    :git: https://github.com/smart-on-fhir/Swift-SMART.git
+    :submodules: true
+
+CHECKOUT OPTIONS:
+  SMART:
+    :commit: e2519049035afbad30446cc3fa27ba5f1e3a04cf
+    :git: https://github.com/smart-on-fhir/Swift-SMART.git
+    :submodules: true
+
+SPEC CHECKSUMS:
+  SMART: c50813e2c29370168592d71331ff704695a92ac4
+
+PODFILE CHECKSUM: 58a20d6b31a940fd8a9957d55f9444990a98b624
+
+COCOAPODS: 1.5.2

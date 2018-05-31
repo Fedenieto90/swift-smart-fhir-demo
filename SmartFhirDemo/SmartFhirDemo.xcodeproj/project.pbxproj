@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41B9259603AE38D4B7DA45F9 /* Pods_SmartFhirDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39C9605EC4AACDDD624E75E /* Pods_SmartFhirDemoTests.framework */; };
+		5227C3637379429A1DFBDDE4 /* Pods_SmartFhirDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E0FA39FF3230A2FBB3EF89 /* Pods_SmartFhirDemo.framework */; };
+		89F3363FED9A759A82CC2530 /* Pods_SmartFhirDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B387D35B65908401C6B3DE /* Pods_SmartFhirDemoUITests.framework */; };
 		8B48DC6820000BBF001F3E85 /* AppointmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B48DC6720000BBF001F3E85 /* AppointmentCell.swift */; };
 		8BBDFE7B1FF66FED009FE38D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDFE7A1FF66FED009FE38D /* AppDelegate.swift */; };
 		8BBDFE7D1FF66FED009FE38D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBDFE7C1FF66FED009FE38D /* ViewController.swift */; };
@@ -20,7 +23,6 @@
 		8BE9E1E62000033300774F0D /* ConditionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE9E1E52000033300774F0D /* ConditionCell.swift */; };
 		8BE9E1E82000034600774F0D /* DiagnosticReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE9E1E72000034600774F0D /* DiagnosticReportCell.swift */; };
 		8BE9E1EA2000035400774F0D /* EncounterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE9E1E92000035400774F0D /* EncounterCell.swift */; };
-		8BEF7E361FFBC2AF004C02CA /* SMART.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BEF7E2F1FFBC111004C02CA /* SMART.framework */; };
 		8BEF7E3F1FFC4614004C02CA /* MedicationDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF7E3E1FFC4614004C02CA /* MedicationDetailVC.swift */; };
 		8BEF7E431FFC492B004C02CA /* MedicationRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF7E421FFC492B004C02CA /* MedicationRequestCell.swift */; };
 /* End PBXBuildFile section */
@@ -40,37 +42,17 @@
 			remoteGlobalIDString = 8BBDFE761FF66FED009FE38D;
 			remoteInfo = SmartFhirDemo;
 		};
-		8BEF7E2E1FFBC111004C02CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8BEF7E261FFBC110004C02CA /* SwiftSMART.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE43B1A919546D880017679A;
-			remoteInfo = "SwiftSMART-iOS";
-		};
-		8BEF7E301FFBC111004C02CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8BEF7E261FFBC110004C02CA /* SwiftSMART.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE43B1B319546D880017679A;
-			remoteInfo = "SwiftSMART-iOSTests";
-		};
-		8BEF7E321FFBC111004C02CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8BEF7E261FFBC110004C02CA /* SwiftSMART.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EECAA7831A5D3DE60062C64B;
-			remoteInfo = "SwiftSMART-macOS";
-		};
-		8BEF7E341FFBC111004C02CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8BEF7E261FFBC110004C02CA /* SwiftSMART.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE13AA921A5D44D100B901FD;
-			remoteInfo = "SwiftSMART-macOSTests";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		011399A39CCF7DC9F7C95A16 /* Pods-SmartFhirDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFhirDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFhirDemoUITests/Pods-SmartFhirDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		16B3ABA1079D1C80ED275C9B /* Pods-SmartFhirDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFhirDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFhirDemoTests/Pods-SmartFhirDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		1E75409A09B246109CA287E1 /* Pods-SmartFhirDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFhirDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFhirDemo/Pods-SmartFhirDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		1FFAC395B890AD0F81A3CDB8 /* Pods-SmartFhirDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFhirDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFhirDemoUITests/Pods-SmartFhirDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		646082463908201DC63D46B1 /* Pods-SmartFhirDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFhirDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFhirDemo/Pods-SmartFhirDemo.release.xcconfig"; sourceTree = "<group>"; };
+		72B5F21398CB5BB45C7B2B3F /* Pods-SmartFhirDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartFhirDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartFhirDemoTests/Pods-SmartFhirDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		76E0FA39FF3230A2FBB3EF89 /* Pods_SmartFhirDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFhirDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B387D35B65908401C6B3DE /* Pods_SmartFhirDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFhirDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B48DC6720000BBF001F3E85 /* AppointmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentCell.swift; sourceTree = "<group>"; };
 		8BBDFE771FF66FED009FE38D /* SmartFhirDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartFhirDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BBDFE7A1FF66FED009FE38D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,9 +72,9 @@
 		8BE9E1E52000033300774F0D /* ConditionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionCell.swift; sourceTree = "<group>"; };
 		8BE9E1E72000034600774F0D /* DiagnosticReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticReportCell.swift; sourceTree = "<group>"; };
 		8BE9E1E92000035400774F0D /* EncounterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncounterCell.swift; sourceTree = "<group>"; };
-		8BEF7E261FFBC110004C02CA /* SwiftSMART.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwiftSMART.xcodeproj; sourceTree = "<group>"; };
 		8BEF7E3E1FFC4614004C02CA /* MedicationDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationDetailVC.swift; sourceTree = "<group>"; };
 		8BEF7E421FFC492B004C02CA /* MedicationRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationRequestCell.swift; sourceTree = "<group>"; };
+		D39C9605EC4AACDDD624E75E /* Pods_SmartFhirDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartFhirDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BEF7E361FFBC2AF004C02CA /* SMART.framework in Frameworks */,
+				5227C3637379429A1DFBDDE4 /* Pods_SmartFhirDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41B9259603AE38D4B7DA45F9 /* Pods_SmartFhirDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89F3363FED9A759A82CC2530 /* Pods_SmartFhirDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +113,7 @@
 				8BBDFE991FF66FED009FE38D /* SmartFhirDemoUITests */,
 				8BBDFE781FF66FED009FE38D /* Products */,
 				8BBDFEB81FF67031009FE38D /* Frameworks */,
+				95EFE08EAFF17531FB0D361B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,7 +134,6 @@
 				8BEF7E3A1FFBF6AF004C02CA /* API */,
 				8BEF7E3B1FFBF6B7004C02CA /* Storyboards */,
 				8BEF7E391FFBF6A4004C02CA /* VCs */,
-				8BBDFEBA1FF670CC009FE38D /* Frameworks */,
 				8BBDFE811FF66FED009FE38D /* Assets.xcassets */,
 				8BBDFE861FF66FED009FE38D /* Info.plist */,
 			);
@@ -177,35 +161,11 @@
 		8BBDFEB81FF67031009FE38D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76E0FA39FF3230A2FBB3EF89 /* Pods_SmartFhirDemo.framework */,
+				D39C9605EC4AACDDD624E75E /* Pods_SmartFhirDemoTests.framework */,
+				84B387D35B65908401C6B3DE /* Pods_SmartFhirDemoUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8BBDFEBA1FF670CC009FE38D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8BBDFEBB1FF670DB009FE38D /* FHIRSmart */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
-		8BBDFEBB1FF670DB009FE38D /* FHIRSmart */ = {
-			isa = PBXGroup;
-			children = (
-				8BEF7E261FFBC110004C02CA /* SwiftSMART.xcodeproj */,
-			);
-			path = FHIRSmart;
-			sourceTree = "<group>";
-		};
-		8BEF7E271FFBC110004C02CA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8BEF7E2F1FFBC111004C02CA /* SMART.framework */,
-				8BEF7E311FFBC111004C02CA /* SwiftSMART-iOSTests.xctest */,
-				8BEF7E331FFBC111004C02CA /* SMART.framework */,
-				8BEF7E351FFBC111004C02CA /* SwiftSMART-macOSTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		8BEF7E391FFBF6A4004C02CA /* VCs */ = {
@@ -256,6 +216,19 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		95EFE08EAFF17531FB0D361B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E75409A09B246109CA287E1 /* Pods-SmartFhirDemo.debug.xcconfig */,
+				646082463908201DC63D46B1 /* Pods-SmartFhirDemo.release.xcconfig */,
+				72B5F21398CB5BB45C7B2B3F /* Pods-SmartFhirDemoTests.debug.xcconfig */,
+				16B3ABA1079D1C80ED275C9B /* Pods-SmartFhirDemoTests.release.xcconfig */,
+				1FFAC395B890AD0F81A3CDB8 /* Pods-SmartFhirDemoUITests.debug.xcconfig */,
+				011399A39CCF7DC9F7C95A16 /* Pods-SmartFhirDemoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -263,9 +236,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BBDFE9F1FF66FED009FE38D /* Build configuration list for PBXNativeTarget "SmartFhirDemo" */;
 			buildPhases = (
+				060998093BD0ED7D7F88E640 /* [CP] Check Pods Manifest.lock */,
 				8BBDFE731FF66FED009FE38D /* Sources */,
 				8BBDFE741FF66FED009FE38D /* Frameworks */,
 				8BBDFE751FF66FED009FE38D /* Resources */,
+				BC98119F4E3D5DB9CDF91612 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,6 +255,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BBDFEA21FF66FED009FE38D /* Build configuration list for PBXNativeTarget "SmartFhirDemoTests" */;
 			buildPhases = (
+				D31D8AA40F95C4BEB664347E /* [CP] Check Pods Manifest.lock */,
 				8BBDFE871FF66FED009FE38D /* Sources */,
 				8BBDFE881FF66FED009FE38D /* Frameworks */,
 				8BBDFE891FF66FED009FE38D /* Resources */,
@@ -298,6 +274,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BBDFEA51FF66FED009FE38D /* Build configuration list for PBXNativeTarget "SmartFhirDemoUITests" */;
 			buildPhases = (
+				EF24CFF7AB94469D7F047A72 /* [CP] Check Pods Manifest.lock */,
 				8BBDFE921FF66FED009FE38D /* Sources */,
 				8BBDFE931FF66FED009FE38D /* Frameworks */,
 				8BBDFE941FF66FED009FE38D /* Resources */,
@@ -349,12 +326,6 @@
 			mainGroup = 8BBDFE6E1FF66FED009FE38D;
 			productRefGroup = 8BBDFE781FF66FED009FE38D /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 8BEF7E271FFBC110004C02CA /* Products */;
-					ProjectRef = 8BEF7E261FFBC110004C02CA /* SwiftSMART.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8BBDFE761FF66FED009FE38D /* SmartFhirDemo */,
@@ -363,37 +334,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		8BEF7E2F1FFBC111004C02CA /* SMART.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SMART.framework;
-			remoteRef = 8BEF7E2E1FFBC111004C02CA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8BEF7E311FFBC111004C02CA /* SwiftSMART-iOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SwiftSMART-iOSTests.xctest";
-			remoteRef = 8BEF7E301FFBC111004C02CA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8BEF7E331FFBC111004C02CA /* SMART.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SMART.framework;
-			remoteRef = 8BEF7E321FFBC111004C02CA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8BEF7E351FFBC111004C02CA /* SwiftSMART-macOSTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SwiftSMART-macOSTests.xctest";
-			remoteRef = 8BEF7E341FFBC111004C02CA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8BBDFE751FF66FED009FE38D /* Resources */ = {
@@ -421,6 +361,81 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		060998093BD0ED7D7F88E640 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartFhirDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC98119F4E3D5DB9CDF91612 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SmartFhirDemo/Pods-SmartFhirDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SMART/SMART.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SMART.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartFhirDemo/Pods-SmartFhirDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D31D8AA40F95C4BEB664347E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartFhirDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF24CFF7AB94469D7F047A72 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartFhirDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8BBDFE731FF66FED009FE38D /* Sources */ = {
@@ -600,6 +615,7 @@
 		};
 		8BBDFEA01FF66FED009FE38D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E75409A09B246109CA287E1 /* Pods-SmartFhirDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -614,6 +630,7 @@
 		};
 		8BBDFEA11FF66FED009FE38D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 646082463908201DC63D46B1 /* Pods-SmartFhirDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -628,6 +645,7 @@
 		};
 		8BBDFEA31FF66FED009FE38D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72B5F21398CB5BB45C7B2B3F /* Pods-SmartFhirDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -644,6 +662,7 @@
 		};
 		8BBDFEA41FF66FED009FE38D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16B3ABA1079D1C80ED275C9B /* Pods-SmartFhirDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -660,6 +679,7 @@
 		};
 		8BBDFEA61FF66FED009FE38D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FFAC395B890AD0F81A3CDB8 /* Pods-SmartFhirDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -675,6 +695,7 @@
 		};
 		8BBDFEA71FF66FED009FE38D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 011399A39CCF7DC9F7C95A16 /* Pods-SmartFhirDemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

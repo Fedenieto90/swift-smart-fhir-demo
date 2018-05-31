@@ -56,6 +56,12 @@ class ViewController: UIViewController {
                     print("Error while trying to connect to SMART FHIR")
                     self.connectBtn.isHidden = false
                     self.tableView.isHidden = true
+                    
+                    //Logout
+                    SmartAPI.shared.logout()
+                    
+                    //Try to connect again
+                    self.connectWithFHIR()
                 } else {
                     //Success
                     print("Successfully connected to SMART FHIR")

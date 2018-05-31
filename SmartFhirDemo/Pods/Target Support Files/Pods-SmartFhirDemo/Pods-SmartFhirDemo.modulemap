@@ -1,0 +1,6 @@
+framework module Pods_SmartFhirDemo {
+  umbrella header "Pods-SmartFhirDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

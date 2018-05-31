@@ -15,13 +15,15 @@ class SmartAPI: NSObject {
     
     let smart : Client
     
-    let STU3SandboxURL = "https://sb-fhir-stu3.smarthealthit.org/smartstu3/open"
-    let redirectURL = "smartfhirdemo://callback"
-    let clientId = "39613a79-c2ca-4336-a6e1-e18660df985c"
+    let STU3SandboxURL = "https://launch.smarthealthit.org/v/r3/sim/eyJrIjoiMSIsImIiOiIyZTI3YzcxZS0zMGM4LTRjZWItOGMxYy01NjQxZTA2NmMwYTQsZTEyYjIxODgtNWI2Ny00NjRmLWExZTAtNjE5OWUwMmIwNjY0In0/fhir" // STU3 Sandbox
+    let redirectURL = "smartfhirdemo://callback" //Your registered callbkack URL
+    let clientId = "*****" //Your clientID
+    var launchPatientScope = "launch/patient patient/Patient.read patient/AllergyIntolerance.read patient/CarePlan.read patient/Condition.read patient/Encounter.read patient/Goal.read patient/Observation.read patient/Procedure.read patient/DiagnsosticReport.read" //Scope needed for standalone patient app launch
     
     private struct Keys {
         static let clientId = "client_id"
         static let redirect = "redirect"
+        static let scope = "scope"
     }
     
     override init() {
@@ -30,11 +32,12 @@ class SmartAPI: NSObject {
             baseURL: URL(string: STU3SandboxURL)!,
             settings: [
                 Keys.clientId: clientId,
-                Keys.redirect: redirectURL
+                Keys.redirect: redirectURL,
+                Keys.scope : launchPatientScope
                 ])
         
         //Set client auth properties
-        smart.authProperties.granularity = .patientSelectNative
+        smart.authProperties.granularity = .tokenOnly
         smart.authProperties.embedded = true
     }
     
@@ -43,6 +46,17 @@ class SmartAPI: NSObject {
     func auth(completion: @escaping (_ patient : Patient?, _ error : Error?) -> Void) {
         smart.authorize { (patient, error) in
             completion(patient, error)
+        }
+    }
+    
+    //MARK : - Logout
+    
+    func logout() {
+        smart.reset()
+        //Remove browser cookies also
+        let storage = HTTPCookieStorage.shared
+        for cookie in (storage.cookies)! {
+            storage.deleteCookie(cookie)
         }
     }
     
